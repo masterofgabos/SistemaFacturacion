@@ -2,11 +2,12 @@ CREATE DATABASE OrdenesCompra;
 
 CREATE TABLE Usuario(
 usuario_correo  VARCHAR (150) NOT NULL,
-usuario_contraseña VARCHAR (100) NOT NULL);
+usuario_contraseÃ±a VARCHAR (100) NOT NULL);
 
 CREATE TABLE OrdenCompra(
 id_oc				INT NOT NULL IDENTITY (1,1),
 cliente_oc			VARCHAR (100) NOT NULL,
+proveedor_oc		VARCHAR (100) NOT NULL,
 cantidad_oc			INT NOT NULL,
 descripcion_oc		VARCHAR (150) NOT NULL,
 producto_oc			VARCHAR (150) NOT NULL,
