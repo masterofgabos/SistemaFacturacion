@@ -1,0 +1,14 @@
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\bin\Debug\OrdenesCompra.exe.config
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\bin\Debug\OrdenesCompra.exe
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\bin\Debug\OrdenesCompra.pdb
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.SuggestedBindingRedirects.cache
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioAgregarOC.resources
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioMenu.resources
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioPrincipal.resources
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioVerOC.resources
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.Properties.Resources.resources
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.exe
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.pdb
