@@ -77,6 +77,8 @@ namespace OrdenesCompra
         public string Correo { get; set; }
         public string Pass { get; set; }
 
+        public bool Activo { get; set; }
+
         public DatosUsuario()
         {
 
@@ -87,6 +89,7 @@ namespace OrdenesCompra
             this.Correo = pCorreo;
             this.Pass = pPass;
         }
+
     }
 
 }

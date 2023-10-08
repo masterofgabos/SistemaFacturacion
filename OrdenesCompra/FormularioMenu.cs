@@ -15,6 +15,8 @@ namespace OrdenesCompra
         public FormularioMenu()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+
         }
     }
 }
