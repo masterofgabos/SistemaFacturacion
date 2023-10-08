@@ -15,6 +15,19 @@ namespace OrdenesCompra
         public FormularioVerOC()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void cerrarsesion_Click(object sender, EventArgs e)
+        {
+            FormularioPrincipal ventanalogin = new FormularioPrincipal();
+            this.Hide();
+            ventanalogin.Show();
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
