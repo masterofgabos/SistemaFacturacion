@@ -1,0 +1,21 @@
+Title	Assignees	Status
+Configurar entorno de desarollo		Todo
+Preparar modelo BD		Todo
+Validar credenciales en BD		Todo
+Crear loggin de ingreso		Todo
+Desarrollar pantalla menú		Todo
+Ingresar orden de compra		Todo
+Registrar orden en BD		Todo
+Consultar ordenes ingresadas		Todo
+Generar factura a partir de orden de compra		Todo
+Mostrar detalle de factura		Todo
+Registrar factura de orden en BD		Todo
+Cambiar estado de factura a enviado		Todo
+Enviar factura vía email		Todo
+probar validación de campos		Todo
+Probar flujos de aplicación		Todo
+Corregir fallos que se encuentren en el proceso		Todo
+Documentar funcionalidades		Todo
+Versionar códigos fuente		Todo
+Desplegar aplicación en ambiente de pruebas		Todo
+Validar rendimiento del sistema		Todo
