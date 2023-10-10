@@ -37,9 +37,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.button1.Location = new System.Drawing.Point(333, 434);
+            this.button1.Location = new System.Drawing.Point(250, 353);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(295, 63);
+            this.button1.Size = new System.Drawing.Size(221, 51);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cerrar sesión";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // veroc
             // 
             this.veroc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.veroc.Location = new System.Drawing.Point(333, 301);
+            this.veroc.Location = new System.Drawing.Point(250, 245);
+            this.veroc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.veroc.Name = "veroc";
-            this.veroc.Size = new System.Drawing.Size(295, 63);
+            this.veroc.Size = new System.Drawing.Size(221, 51);
             this.veroc.TabIndex = 1;
             this.veroc.Text = "Revisar órden de compra";
             this.veroc.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // ingre
             // 
             this.ingre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ingre.Location = new System.Drawing.Point(333, 232);
+            this.ingre.Location = new System.Drawing.Point(250, 188);
+            this.ingre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ingre.Name = "ingre";
-            this.ingre.Size = new System.Drawing.Size(295, 63);
+            this.ingre.Size = new System.Drawing.Size(221, 51);
             this.ingre.TabIndex = 2;
             this.ingre.Text = "Ingresar órden de compra";
             this.ingre.UseVisualStyleBackColor = true;
@@ -71,25 +74,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.label1.Location = new System.Drawing.Point(251, 76);
+            this.label1.Location = new System.Drawing.Point(188, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 76);
+            this.label1.Size = new System.Drawing.Size(380, 63);
             this.label1.TabIndex = 3;
             this.label1.Text = "Menú principal";
             // 
             // FormularioMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 536);
+            this.ClientSize = new System.Drawing.Size(760, 537);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ingre);
             this.Controls.Add(this.veroc);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormularioMenu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormularioMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

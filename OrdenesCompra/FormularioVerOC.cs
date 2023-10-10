@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace OrdenesCompra
 {
@@ -28,6 +29,11 @@ namespace OrdenesCompra
         private void salir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DgvProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DgvProducto.DataSource = Metodos.ListarOrdenes();
         }
     }
 }

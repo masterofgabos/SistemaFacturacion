@@ -40,5 +40,10 @@ namespace OrdenesCompra
             this.Hide();
             ventanalogin.Show();
         }
+
+        private void FormularioMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

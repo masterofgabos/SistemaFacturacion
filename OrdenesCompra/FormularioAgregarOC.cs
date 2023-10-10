@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace OrdenesCompra
 {
@@ -15,6 +16,108 @@ namespace OrdenesCompra
         public FormularioAgregarOC()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DatosOC pDatosOC = new DatosOC();
+            pDatosOC.Cliente_oc = textBox1.Text;
+            pDatosOC.Proveedor_oc = textBox2.Text;
+            pDatosOC.Cantidad_oc = int.Parse(textBox3.Text);
+            pDatosOC.Descripcion_oc = textBox4.Text;
+            pDatosOC.Producto_oc = textBox5.Text;
+            pDatosOC.Monto_oc = int.Parse(textBox6.Text);
+            pDatosOC.Descuentos_oc = int.Parse(textBox7.Text);
+            pDatosOC.Monto_total_oc = int.Parse(textBox8.Text);
+            pDatosOC.Fecha_oc = maskedTextBox1.Text;
+            pDatosOC.Rut_cli_oc = textBox9.Text;
+            pDatosOC.Rut_prov_oc = textBox10.Text;
+            pDatosOC.Tel_cli_oc = int.Parse(textBox11.Text);
+            pDatosOC.Tel_prov_oc = int.Parse(textBox12.Text);
+            pDatosOC.Correo_cli_oc = textBox13.Text;
+            pDatosOC.Correo_prov_oc = textBox14.Text;
+            pDatosOC.Dir_cli_oc = textBox15.Text;
+            pDatosOC.Dir_prov_oc = textBox16.Text;
+
+
+            int resultado = Metodos.AgregarOC(pDatosOC);
+
+            if (resultado > 0)
+            {
+                MessageBox.Show("Datos modificados correctamente", "Datos modificados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                MessageBox.Show("No se pueden modificar los datos", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cerrarsesion_Click(object sender, EventArgs e)
+        {
+            FormularioPrincipal ventanalogin = new FormularioPrincipal();
+            this.Hide();
+            ventanalogin.Show();
+        }
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);
+        }
+
+        private void textBox11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);
+        }
+
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloNumeros(e);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Metodos.SoloLetras(e);
         }
     }
 }

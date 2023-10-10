@@ -44,12 +44,18 @@ namespace OrdenesCompra
             }
         }
 
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
         private void txtContra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
