@@ -182,6 +182,7 @@ namespace OrdenesCompra
                         "correo_prov_oc," +
                         "dir_cli_oc," +
                         "dir_prov_oc) " +
+                        "despacho_oc) " +
 
                         "VALUES " +
                         "(@Cliente_oc, " +
@@ -200,7 +201,8 @@ namespace OrdenesCompra
                         "@Correo_cli_oc, " +
                         "@Correo_prov_oc, " +
                         "@Dir_cli_oc, " +
-                        "@Dir_prov_oc)";
+                        "@Dir_prov_oc)" +
+                        "EN PROGRESO";
 
                     comando.Parameters.AddWithValue("@Cliente_oc", pDatosOC.Cliente_oc);
                     comando.Parameters.AddWithValue("@Proveedor_oc", pDatosOC.Proveedor_oc);
