@@ -45,5 +45,12 @@ namespace OrdenesCompra
         {
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Formulario ventanalogin = new Formulario();
+            this.Hide();
+            ventanalogin.Show();
+        }
     }
 }

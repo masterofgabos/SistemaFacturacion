@@ -25,3 +25,14 @@ C:\Users\diego\source\repos\SistemaFacturacion\OrdenesCompra\obj\Debug\OrdenesCo
 C:\Users\diego\source\repos\SistemaFacturacion\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.CoreCompileInputs.cache
 C:\Users\diego\source\repos\SistemaFacturacion\OrdenesCompra\obj\Debug\OrdenesCompra.exe
 C:\Users\diego\source\repos\SistemaFacturacion\OrdenesCompra\obj\Debug\OrdenesCompra.pdb
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.AssemblyReference.cache
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.Formulario.resources
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioAgregarOC.resources
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioMenu.resources
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioPrincipal.resources
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioVerOC.resources
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.Properties.Resources.resources
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.GenerateResource.cache
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.CoreCompileInputs.cache
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.exe
+C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.pdb
