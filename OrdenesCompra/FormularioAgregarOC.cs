@@ -58,16 +58,12 @@ namespace OrdenesCompra
             }
         }
 
-        private void cerrarsesion_Click(object sender, EventArgs e)
-        {
-            FormularioPrincipal ventanalogin = new FormularioPrincipal();
-            this.Hide();
-            ventanalogin.Show();
-        }
 
         private void salir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormularioMenu ventanamenu = new FormularioMenu();
+            this.Hide();
+            ventanamenu.Show();
         }
 
         private void textBox9_TextChanged(object sender, EventArgs e)

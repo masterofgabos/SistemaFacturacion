@@ -32,8 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvProducto = new System.Windows.Forms.DataGridView();
             this.salir = new System.Windows.Forms.Button();
-            this.cerrarsesion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,60 +57,67 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvProducto.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvProducto.Location = new System.Drawing.Point(29, 96);
-            this.DgvProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvProducto.Location = new System.Drawing.Point(39, 118);
+            this.DgvProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvProducto.Name = "DgvProducto";
             this.DgvProducto.RowHeadersWidth = 51;
             this.DgvProducto.RowTemplate.Height = 24;
-            this.DgvProducto.Size = new System.Drawing.Size(705, 389);
+            this.DgvProducto.Size = new System.Drawing.Size(940, 479);
             this.DgvProducto.TabIndex = 30;
             this.DgvProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducto_CellContentClick);
             // 
             // salir
             // 
             this.salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salir.Location = new System.Drawing.Point(233, 490);
-            this.salir.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.salir.Location = new System.Drawing.Point(419, 605);
+            this.salir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.salir.Name = "salir";
-            this.salir.Size = new System.Drawing.Size(137, 35);
+            this.salir.Size = new System.Drawing.Size(183, 43);
             this.salir.TabIndex = 31;
-            this.salir.Text = "Salir del sistema";
+            this.salir.Text = "Volver al menu";
             this.salir.UseVisualStyleBackColor = true;
             this.salir.Click += new System.EventHandler(this.salir_Click);
-            // 
-            // cerrarsesion
-            // 
-            this.cerrarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cerrarsesion.Location = new System.Drawing.Point(374, 490);
-            this.cerrarsesion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cerrarsesion.Name = "cerrarsesion";
-            this.cerrarsesion.Size = new System.Drawing.Size(137, 35);
-            this.cerrarsesion.TabIndex = 32;
-            this.cerrarsesion.Text = "Cerrar sesión";
-            this.cerrarsesion.UseVisualStyleBackColor = true;
-            this.cerrarsesion.Click += new System.EventHandler(this.cerrarsesion_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F);
-            this.label1.Location = new System.Drawing.Point(96, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(608, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(588, 63);
+            this.label1.Size = new System.Drawing.Size(371, 39);
             this.label1.TabIndex = 33;
             this.label1.Text = "Ver órdenes de compra";
             // 
+            // buscar
+            // 
+            this.buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buscar.Location = new System.Drawing.Point(253, 48);
+            this.buscar.Name = "buscar";
+            this.buscar.Size = new System.Drawing.Size(90, 30);
+            this.buscar.TabIndex = 34;
+            this.buscar.Text = "Buscar";
+            this.buscar.UseVisualStyleBackColor = true;
+            this.buscar.Click += new System.EventHandler(this.buscar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBox1.Location = new System.Drawing.Point(39, 48);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(192, 30);
+            this.textBox1.TabIndex = 35;
+            // 
             // FormularioVerOC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 537);
+            this.ClientSize = new System.Drawing.Size(1013, 661);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cerrarsesion);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.DgvProducto);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormularioVerOC";
             this.Text = "FormularioVerOC";
             ((System.ComponentModel.ISupportInitialize)(this.DgvProducto)).EndInit();
@@ -122,7 +130,8 @@
 
         private System.Windows.Forms.DataGridView DgvProducto;
         private System.Windows.Forms.Button salir;
-        private System.Windows.Forms.Button cerrarsesion;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buscar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

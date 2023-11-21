@@ -49,12 +49,6 @@
     <Compile Include="BaseConexion.cs" />
     <Compile Include="Constructores.cs" />
     <Compile Include="CRUD.cs" />
-    <Compile Include="Formulario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulario.Designer.cs">
-      <DependentUpon>Formulario.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormularioAgregarOC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +75,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formulario.resx">
-      <DependentUpon>Formulario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormularioAgregarOC.resx">
       <DependentUpon>FormularioAgregarOC.cs</DependentUpon>
     </EmbeddedResource>

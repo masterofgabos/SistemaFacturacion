@@ -19,21 +19,43 @@ namespace OrdenesCompra
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void cerrarsesion_Click(object sender, EventArgs e)
-        {
-            FormularioPrincipal ventanalogin = new FormularioPrincipal();
-            this.Hide();
-            ventanalogin.Show();
-        }
-
         private void salir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            FormularioMenu ventanamenu = new FormularioMenu();
+            this.Hide();
+            ventanamenu.Show();
         }
 
         private void DgvProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DgvProducto.DataSource = Metodos.ListarOrdenes();
         }
+
+        private void buscar_Click(object sender, EventArgs e)
+        {
+            int idOrdenBuscada;
+            if (int.TryParse(textBox1.Text, out idOrdenBuscada))
+            {
+                DatosOC ordenEncontrada = Metodos.ObtenerOrdenPorId(idOrdenBuscada);
+
+                if (ordenEncontrada != null)
+                {
+
+                    List<DatosOC> listaOrdenes = new List<DatosOC> { ordenEncontrada };
+                    DgvProducto.DataSource = listaOrdenes;
+
+                    MessageBox.Show("Orden encontrada", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Orden no encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un ID de orden válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
