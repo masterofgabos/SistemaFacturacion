@@ -39,3 +39,4 @@ C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.Generat
 C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.CoreCompileInputs.cache
 C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.exe
 C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.pdb
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioFacturacion.resources

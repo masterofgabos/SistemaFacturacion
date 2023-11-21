@@ -55,6 +55,12 @@
     <Compile Include="FormularioAgregarOC.Designer.cs">
       <DependentUpon>FormularioAgregarOC.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioFacturacion.Designer.cs">
+      <DependentUpon>FormularioFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormularioAgregarOC.resx">
       <DependentUpon>FormularioAgregarOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioFacturacion.resx">
+      <DependentUpon>FormularioFacturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioMenu.resx">
       <DependentUpon>FormularioMenu.cs</DependentUpon>

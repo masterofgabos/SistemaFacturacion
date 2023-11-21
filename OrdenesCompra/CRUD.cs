@@ -89,6 +89,8 @@ namespace OrdenesCompra
             return datosUsuario;
         }
 
+
+
         // METODOS LISTAR ORDENES DE COMPRA
 
         public static List<DatosOC> ListarOrdenes()
@@ -198,7 +200,42 @@ namespace OrdenesCompra
             }
         }
 
+        //METODOS CAMBIAR ESTADO ORDENES DE COMPRA
 
+        public static int CambiarEstado(DatosOC pDatosDespacho)
+        {
+            int retornoActualizarDatosModificados = 0;
+            using (SqlConnection conexion = BaseConexion.ObtenerConexion())
+            {
+
+                using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set despacho_oc= 'Despachado' where id_oc='{0}'",
+                        pDatosDespacho.Id_oc, conexion)))
+
+                    retornoActualizarDatosModificados = comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            return retornoActualizarDatosModificados;
+        }
+
+
+        //METODOS CALCULAR MONTO TOTAL ORDENES DE COMPRA
+
+        public static int CalcularMonto(DatosOC pDatosDespacho)
+        {
+            int retornoActualizarDatosModificados = 0;
+            using (SqlConnection conexion = BaseConexion.ObtenerConexion())
+            {
+
+                using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set monto_total_oc= (monto_oc - descuento_oc) + monto_oc*0.19 where id_oc='{0}'",
+                        pDatosDespacho.Id_oc, conexion)))
+
+                    retornoActualizarDatosModificados = comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            return retornoActualizarDatosModificados;
+        }
 
 
         //METODOS AGREGAR ORDENES DE COMPRA
@@ -240,7 +277,7 @@ namespace OrdenesCompra
                         "@Producto_oc, " +
                         "@Monto_oc, " +
                         "@Descuentos_oc, " +
-                        "@Monto_total_oc, " +
+                        "0, " +
                         "@Fecha_oc, " +
                         "@Rut_cli_oc, " +
                         "@Rut_prov_oc, " +
@@ -259,7 +296,6 @@ namespace OrdenesCompra
                     comando.Parameters.AddWithValue("@Producto_oc", pDatosOC.Producto_oc);
                     comando.Parameters.AddWithValue("@Monto_oc", pDatosOC.Monto_oc);
                     comando.Parameters.AddWithValue("@Descuentos_oc", pDatosOC.Descuentos_oc);
-                    comando.Parameters.AddWithValue("@Monto_total_oc", pDatosOC.Monto_total_oc);
                     comando.Parameters.AddWithValue("@Fecha_oc", DateTime.Parse(pDatosOC.Fecha_oc));
                     comando.Parameters.AddWithValue("@Rut_cli_oc", pDatosOC.Rut_cli_oc);
                     comando.Parameters.AddWithValue("@Rut_prov_oc", pDatosOC.Rut_prov_oc);

@@ -57,5 +57,34 @@ namespace OrdenesCompra
             }
         }
 
+        private void btnCambiarEstado_Click(object sender, EventArgs e)
+        {
+            DatosOC cambiarOD = new DatosOC();
+            cambiarOD.Id_oc = int.Parse(textBox1.Text);
+
+
+            int resultado = Metodos.CambiarEstado(cambiarOD);
+
+            if (resultado > 0)
+            {
+                MessageBox.Show("Datos modificados correctamente", "Datos modificados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                MessageBox.Show("No se pueden modificar los datos", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }

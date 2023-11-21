@@ -33,7 +33,6 @@ namespace OrdenesCompra
             pDatosOC.Producto_oc = textBox5.Text;
             pDatosOC.Monto_oc = int.Parse(textBox6.Text);
             pDatosOC.Descuentos_oc = int.Parse(textBox7.Text);
-            pDatosOC.Monto_total_oc = int.Parse(textBox8.Text);
             pDatosOC.Fecha_oc = maskedTextBox1.Text;
             pDatosOC.Rut_cli_oc = textBox9.Text;
             pDatosOC.Rut_prov_oc = textBox10.Text;
