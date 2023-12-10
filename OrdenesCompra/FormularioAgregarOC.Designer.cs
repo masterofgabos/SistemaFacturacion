@@ -80,8 +80,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+<<<<<<< Updated upstream
             this.button1.Location = new System.Drawing.Point(780, 598);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.button1.Location = new System.Drawing.Point(1170, 934);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(183, 43);
             this.button1.TabIndex = 35;
@@ -283,8 +288,13 @@
             // 
             // textBox1
             // 
+<<<<<<< Updated upstream
             this.textBox1.Location = new System.Drawing.Point(216, 142);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox1.Location = new System.Drawing.Point(326, 206);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(269, 22);
             this.textBox1.TabIndex = 55;
@@ -292,8 +302,13 @@
             // 
             // textBox2
             // 
+<<<<<<< Updated upstream
             this.textBox2.Location = new System.Drawing.Point(216, 174);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox2.Location = new System.Drawing.Point(326, 256);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(269, 22);
             this.textBox2.TabIndex = 56;
@@ -301,8 +316,13 @@
             // 
             // textBox3
             // 
+<<<<<<< Updated upstream
             this.textBox3.Location = new System.Drawing.Point(216, 206);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox3.Location = new System.Drawing.Point(326, 306);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(269, 22);
             this.textBox3.TabIndex = 57;
@@ -311,24 +331,39 @@
             // 
             // textBox4
             // 
+<<<<<<< Updated upstream
             this.textBox4.Location = new System.Drawing.Point(216, 238);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox4.Location = new System.Drawing.Point(326, 356);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(269, 22);
             this.textBox4.TabIndex = 58;
             // 
             // textBox5
             // 
+<<<<<<< Updated upstream
             this.textBox5.Location = new System.Drawing.Point(216, 270);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox5.Location = new System.Drawing.Point(326, 406);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(269, 22);
             this.textBox5.TabIndex = 59;
             // 
             // textBox6
             // 
+<<<<<<< Updated upstream
             this.textBox6.Location = new System.Drawing.Point(216, 302);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox6.Location = new System.Drawing.Point(326, 456);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(269, 22);
             this.textBox6.TabIndex = 60;
@@ -336,8 +371,13 @@
             // 
             // textBox7
             // 
+<<<<<<< Updated upstream
             this.textBox7.Location = new System.Drawing.Point(216, 334);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox7.Location = new System.Drawing.Point(326, 506);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(269, 22);
             this.textBox7.TabIndex = 61;
@@ -345,8 +385,13 @@
             // 
             // textBox9
             // 
+<<<<<<< Updated upstream
             this.textBox9.Location = new System.Drawing.Point(695, 142);
             this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox9.Location = new System.Drawing.Point(1044, 206);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(269, 22);
             this.textBox9.TabIndex = 63;
@@ -354,26 +399,42 @@
             // 
             // maskedTextBox1
             // 
+<<<<<<< Updated upstream
             this.maskedTextBox1.Location = new System.Drawing.Point(216, 369);
             this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.maskedTextBox1.Location = new System.Drawing.Point(326, 558);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(269, 22);
             this.maskedTextBox1.TabIndex = 64;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // textBox10
             // 
+<<<<<<< Updated upstream
             this.textBox10.Location = new System.Drawing.Point(695, 174);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox10.Location = new System.Drawing.Point(1044, 256);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(269, 22);
             this.textBox10.TabIndex = 65;
             // 
             // textBox11
             // 
+<<<<<<< Updated upstream
             this.textBox11.Location = new System.Drawing.Point(695, 206);
             this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox11.Location = new System.Drawing.Point(1044, 306);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(269, 22);
             this.textBox11.TabIndex = 66;
@@ -381,8 +442,13 @@
             // 
             // textBox12
             // 
+<<<<<<< Updated upstream
             this.textBox12.Location = new System.Drawing.Point(695, 238);
             this.textBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox12.Location = new System.Drawing.Point(1044, 356);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(269, 22);
             this.textBox12.TabIndex = 67;
@@ -390,32 +456,52 @@
             // 
             // textBox13
             // 
+<<<<<<< Updated upstream
             this.textBox13.Location = new System.Drawing.Point(695, 270);
             this.textBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox13.Location = new System.Drawing.Point(1044, 406);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(269, 22);
             this.textBox13.TabIndex = 68;
             // 
             // textBox14
             // 
+<<<<<<< Updated upstream
             this.textBox14.Location = new System.Drawing.Point(695, 302);
             this.textBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox14.Location = new System.Drawing.Point(1044, 456);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(269, 22);
             this.textBox14.TabIndex = 69;
             // 
             // textBox15
             // 
+<<<<<<< Updated upstream
             this.textBox15.Location = new System.Drawing.Point(695, 334);
             this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox15.Location = new System.Drawing.Point(1044, 506);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(269, 22);
             this.textBox15.TabIndex = 70;
             // 
             // textBox16
             // 
+<<<<<<< Updated upstream
             this.textBox16.Location = new System.Drawing.Point(695, 366);
             this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.textBox16.Location = new System.Drawing.Point(1044, 556);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(269, 22);
             this.textBox16.TabIndex = 71;
@@ -461,10 +547,15 @@
             this.Controls.Add(this.salir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+<<<<<<< Updated upstream
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.Name = "FormularioAgregarOC";
             this.Text = "1";
+            this.Load += new System.EventHandler(this.FormularioAgregarOC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

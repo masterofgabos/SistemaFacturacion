@@ -27,6 +27,8 @@ namespace OrdenesCompra
         public string Dir_cli_oc { get; set; }
         public string Dir_prov_oc { get; set; }
 
+        public string Despacho_oc { get; set; }
+
         public DatosOC() { }
 
         public DatosOC
@@ -47,7 +49,8 @@ namespace OrdenesCompra
             string pCorreo_cli_oc,
             string pCorreo_prov_oc,
             string pDir_cli_oc,
-            string pDir_prov_oc)
+            string pDir_prov_oc, 
+            string pDespacho_oc)
         {
             this.Id_oc = pId_oc;
             this.Cliente_oc = pCliente_oc;
@@ -67,6 +70,7 @@ namespace OrdenesCompra
             this.Correo_prov_oc = pCorreo_prov_oc;
             this.Dir_cli_oc = pDir_cli_oc;
             this.Dir_prov_oc = pDir_prov_oc;
+            this.Despacho_oc = pDespacho_oc;
 
         }
 

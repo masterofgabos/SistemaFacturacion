@@ -109,9 +109,14 @@
             this.Controls.Add(this.cerrarsesion);
             this.Controls.Add(this.salir);
             this.Controls.Add(this.DgvProducto);
+<<<<<<< Updated upstream
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+=======
+            this.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.Name = "FormularioVerOC";
             this.Text = "FormularioVerOC";
+            this.Load += new System.EventHandler(this.FormularioVerOC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

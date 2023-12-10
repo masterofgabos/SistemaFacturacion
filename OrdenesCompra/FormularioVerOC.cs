@@ -17,6 +17,7 @@ namespace OrdenesCompra
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            DgvProducto.DataSource = Metodos.ListarOrdenes();
         }
 
         private void cerrarsesion_Click(object sender, EventArgs e)
@@ -35,5 +36,68 @@ namespace OrdenesCompra
         {
             DgvProducto.DataSource = Metodos.ListarOrdenes();
         }
+<<<<<<< Updated upstream
+=======
+
+        private void buscar_Click(object sender, EventArgs e)
+        {
+            int idOrdenBuscada;
+            if (int.TryParse(textBox1.Text, out idOrdenBuscada))
+            {
+                DatosOC ordenEncontrada = Metodos.ObtenerOrdenPorId(idOrdenBuscada);
+
+                if (ordenEncontrada != null)
+                {
+
+                    List<DatosOC> listaOrdenes = new List<DatosOC> { ordenEncontrada };
+                    DgvProducto.DataSource = listaOrdenes;
+
+                    MessageBox.Show("Orden encontrada", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Orden no encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un ID de orden válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCambiarEstado_Click(object sender, EventArgs e)
+        {
+            DatosOC cambiarOD = new DatosOC();
+            cambiarOD.Id_oc = int.Parse(textBox1.Text);
+
+
+            int resultado = Metodos.CambiarEstado(cambiarOD);
+
+            if (resultado > 0)
+            {
+                MessageBox.Show("Datos modificados correctamente", "Datos modificados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                MessageBox.Show("No se pueden modificar los datos", "Error al modificar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormularioVerOC_Load(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }

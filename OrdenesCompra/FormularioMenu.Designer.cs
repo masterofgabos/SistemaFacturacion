@@ -103,8 +103,12 @@
             this.Controls.Add(this.ingre);
             this.Controls.Add(this.veroc);
             this.Controls.Add(this.button1);
+<<<<<<< Updated upstream
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.Margin = new System.Windows.Forms.Padding(6);
+>>>>>>> Stashed changes
             this.Name = "FormularioMenu";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormularioMenu_Load);
