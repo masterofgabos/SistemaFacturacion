@@ -19,7 +19,6 @@ namespace OrdenesCompra
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            DgvProducto.DataSource = Metodos.ListarOrdenes();
         }
 
         private void salir_Click(object sender, EventArgs e)
@@ -89,12 +88,22 @@ namespace OrdenesCompra
 
         }
 
-        private void FormularioVerOC_Load(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void btnbuscarfecha_Click(object sender, EventArgs e)
         {
             string fechaOrdenBuscada = maskedTextBox1.Text;
             if (!string.IsNullOrEmpty(fechaOrdenBuscada))
@@ -116,12 +125,13 @@ namespace OrdenesCompra
             }
             else
             {
-                MessageBox.Show("Ingrese un ID de orden válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese una fecha válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExportar_Click(object sender, EventArgs e)
         {
+
             string fechaOrdenBuscada = maskedTextBox1.Text;
             if (!string.IsNullOrEmpty(fechaOrdenBuscada))
             {
@@ -161,14 +171,21 @@ namespace OrdenesCompra
                 }
 
                 // Guardar la aplicación
-                workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                workbook.SaveAs("c:\\salida.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
 
             }
             else
             {
-                MessageBox.Show("Ingrese un ID de orden válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se pudo exportar, busque una fecha válida y cuando aparezcan los datos presione el botón", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+}
+
+        private void FormularioVerOC_Load(object sender, EventArgs e)
+        {
+
         }
     }
+    
     
 }
