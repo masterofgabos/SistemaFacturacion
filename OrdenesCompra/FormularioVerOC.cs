@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.Office.Interop.Excel;
+
 
 namespace OrdenesCompra
 {
@@ -17,6 +19,7 @@ namespace OrdenesCompra
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            DgvProducto.DataSource = Metodos.ListarOrdenes();
         }
 
         private void salir_Click(object sender, EventArgs e)
@@ -84,6 +87,87 @@ namespace OrdenesCompra
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormularioVerOC_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string fechaOrdenBuscada = maskedTextBox1.Text;
+            if (!string.IsNullOrEmpty(fechaOrdenBuscada))
+            {
+                DatosOC ordenEncontrada = Metodos.ObtenerOrdenPorFecha(fechaOrdenBuscada);
+
+                if (ordenEncontrada != null)
+                {
+
+                    List<DatosOC> listaOrdenes = new List<DatosOC> { ordenEncontrada };
+                    DgvProducto.DataSource = listaOrdenes;
+
+                    MessageBox.Show("Orden encontrada", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Orden no encontrada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un ID de orden válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string fechaOrdenBuscada = maskedTextBox1.Text;
+            if (!string.IsNullOrEmpty(fechaOrdenBuscada))
+            {
+                // Creando la aplicación Excel
+                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+
+                // Creando un nuevo libro dentro de la aplicación Excel
+                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+
+                // Creando una nueva hoja de Excel en el libro
+                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+
+                // Mostrar la hoja de Excel detrás del programa
+                app.Visible = true;
+
+                // Obtener la referencia de la primera hoja. Por defecto, su nombre es Sheet1.
+                // Almacenar su referencia en la variable worksheet
+                worksheet = workbook.Sheets["Hoja1"];
+                worksheet = workbook.ActiveSheet;
+
+                // Cambiar el nombre de la hoja activa
+                worksheet.Name = "Exportado desde el GridView";
+
+                // Almacenar la parte del encabezado en Excel
+                for (int i = 1; i < DgvProducto.Columns.Count + 1; i++)
+                {
+                    worksheet.Cells[1, i] = DgvProducto.Columns[i - 1].HeaderText;
+                }
+
+                // Almacenar cada valor de fila y columna en la hoja de Excel
+                for (int i = 0; i < DgvProducto.Rows.Count - 1; i++)
+                {
+                    for (int j = 0; j < DgvProducto.Columns.Count; j++)
+                    {
+                        worksheet.Cells[i + 2, j + 1] = DgvProducto.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                // Guardar la aplicación
+                workbook.SaveAs("c:\\output.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un ID de orden válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
     
