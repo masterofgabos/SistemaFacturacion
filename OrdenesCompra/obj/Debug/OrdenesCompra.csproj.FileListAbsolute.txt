@@ -40,6 +40,7 @@ C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.CoreCom
 C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.exe
 C:\Users\diego\Documents\xd\OrdenesCompra\obj\Debug\OrdenesCompra.pdb
 C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.FormularioFacturacion.resources
+<<<<<<< HEAD
 C:\OrdenesCompra\OrdenesCompra\bin\Debug\OrdenesCompra.exe.config
 C:\OrdenesCompra\OrdenesCompra\bin\Debug\OrdenesCompra.exe
 C:\OrdenesCompra\OrdenesCompra\bin\Debug\OrdenesCompra.pdb
@@ -55,3 +56,6 @@ C:\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.GenerateResource.c
 C:\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.CoreCompileInputs.cache
 C:\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.exe
 C:\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.pdb
+=======
+C:\Users\ASUS\source\repos\OrdenesCompra\OrdenesCompra\obj\Debug\OrdenesCompra.csproj.ResolveComReference.cache
+>>>>>>> 5a2e6926f8ff9e430aa852085cd4e7f835114e38

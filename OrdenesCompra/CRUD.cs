@@ -90,7 +90,6 @@ namespace OrdenesCompra
         }
 
 
-
         // METODOS LISTAR ORDENES DE COMPRA
 
         public static List<DatosOC> ListarOrdenes()
@@ -156,6 +155,58 @@ namespace OrdenesCompra
             }
         }
 
+        //METODOS LISTAR ORDENES DE COMPRA POR FECHA
+
+        public static DatosOC ObtenerOrdenPorFecha(string fecha_oc)
+        {
+            using (SqlConnection conn = BaseConexion.ObtenerConexion())
+            {
+<<<<<<< HEAD
+                string consulta = "SELECT id_oc, cliente_oc, proveedor_oc, cantidad_oc, descripcion_oc, producto_oc, monto_oc, descuentos_oc, monto_total_oc, fecha_oc, rut_cli_oc, rut_prov_oc, tel_cli_oc, tel_prov_oc, correo_cli_oc, correo_prov_oc, dir_cli_oc, dir_prov_oc, despacho_oc FROM [OrdenCompra] WHERE id_oc = @Id";
+=======
+                string consulta = "SELECT id_oc, cliente_oc, proveedor_oc, cantidad_oc, descripcion_oc, producto_oc, monto_oc, descuentos_oc, monto_total_oc, fecha_oc, rut_cli_oc, rut_prov_oc, tel_cli_oc, tel_prov_oc, correo_cli_oc, correo_prov_oc, dir_cli_oc, dir_prov_oc FROM [OrdenCompra] WHERE fecha_oc = @Fecha_oc";
+>>>>>>> 5a2e6926f8ff9e430aa852085cd4e7f835114e38
+
+                SqlCommand comando = new SqlCommand(consulta, conn);
+                comando.Parameters.AddWithValue("@Fecha_oc", fecha_oc);
+
+                SqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    DatosOC pOC = new DatosOC();
+
+                    pOC.Id_oc = reader.GetInt32(0);
+                    pOC.Cliente_oc = reader.GetString(1);
+                    pOC.Proveedor_oc = reader.GetString(2);
+                    pOC.Cantidad_oc = reader.GetInt32(3);
+                    pOC.Descripcion_oc = reader.GetString(4);
+                    pOC.Producto_oc = reader.GetString(5);
+                    pOC.Monto_oc = reader.GetInt32(6);
+                    pOC.Descuentos_oc = reader.GetInt32(7);
+                    pOC.Monto_total_oc = reader.GetInt32(8);
+                    pOC.Fecha_oc = reader.GetDateTime(9).ToShortDateString();
+                    pOC.Rut_cli_oc = reader.GetString(10);
+                    pOC.Rut_prov_oc = reader.GetString(11);
+                    pOC.Tel_cli_oc = reader.GetInt32(12);
+                    pOC.Tel_prov_oc = reader.GetInt32(13);
+                    pOC.Correo_cli_oc = reader.GetString(14);
+                    pOC.Correo_prov_oc = reader.GetString(15);
+                    pOC.Dir_cli_oc = reader.GetString(16);
+                    pOC.Dir_prov_oc = reader.GetString(17);
+                    pOC.Despacho_oc = reader.GetString(18);
+
+                    conn.Close();
+                    return pOC;
+                }
+
+                conn.Close();
+                return null; // Retorna null si no se encuentra la orden con el ID especificado
+            }
+        }
+
+<<<<<<< HEAD
+=======
         //METODOS BUSCAR POR ID
 
 
@@ -203,6 +254,7 @@ namespace OrdenesCompra
             }
         }
 
+>>>>>>> 5a2e6926f8ff9e430aa852085cd4e7f835114e38
 
         //METODOS BUSCAR POR FECHA
 
@@ -261,6 +313,7 @@ namespace OrdenesCompra
 
                 using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set despacho_oc= 'Despachado' where id_oc='{0}'",
                         pDatosDespacho.Id_oc), conexion))
+<<<<<<< HEAD
 
                 retornoActualizarDatosModificados = comando.ExecuteNonQuery();
                 conexion.Close();
@@ -279,8 +332,10 @@ namespace OrdenesCompra
 
                 using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set despacho_oc= 'Nula' where id_oc='{0}'",
                         pDatosDespacho.Id_oc), conexion))
+=======
+>>>>>>> 5a2e6926f8ff9e430aa852085cd4e7f835114e38
 
-                    retornoActualizarDatosModificados = comando.ExecuteNonQuery();
+                retornoActualizarDatosModificados = comando.ExecuteNonQuery();
                 conexion.Close();
 
             }
