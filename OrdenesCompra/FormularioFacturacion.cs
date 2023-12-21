@@ -15,11 +15,12 @@ namespace OrdenesCompra
         public FormularioFacturacion()
         {
             InitializeComponent();
+            dataGridView1.DataSource = Metodos.ListarOrdenes();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.DataSource = Metodos.ListarOrdenes();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -37,6 +38,7 @@ namespace OrdenesCompra
 
             if (resultado > 0)
             {
+                dataGridView1.DataSource = Metodos.ListarOrdenes();
                 MessageBox.Show("Datos modificados correctamente", "Datos modificados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -51,6 +53,11 @@ namespace OrdenesCompra
             FormularioMenu ventanamenu = new FormularioMenu();
             this.Hide();
             ventanamenu.Show();
+        }
+
+        private void FormularioFacturacion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

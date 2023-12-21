@@ -27,6 +27,7 @@ namespace OrdenesCompra
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+
             DatosUsuario usuario = new DatosUsuario();
             usuario.Correo = txtCorreo.Text;
             usuario.Pass = txtContra.Text;
@@ -42,6 +43,7 @@ namespace OrdenesCompra
             {
                 // error en login
             }
+
         }
 
 
