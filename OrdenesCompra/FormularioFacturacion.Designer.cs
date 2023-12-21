@@ -87,9 +87,9 @@
             this.Controls.Add(this.btnFacturacion);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormularioFacturacion";
             this.Text = "FormularioFacturacion";
+            this.Load += new System.EventHandler(this.FormularioFacturacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,7 +11,7 @@ namespace OrdenesCompra
     {
         public static SqlConnection ObtenerConexion()
         {
-            SqlConnection conexion = new SqlConnection("Server= LAPTOP-B5STHNJL\\SQLEXPRESS; database= OrdenesCompra; Integrated Security= True");
+            SqlConnection conexion = new SqlConnection("Server= VICTUS_DE_MARIO; database= OrdenesCompra; Integrated Security= True");
             conexion.Open();
 
 

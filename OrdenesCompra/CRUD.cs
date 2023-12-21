@@ -119,7 +119,8 @@ namespace OrdenesCompra
                     "correo_cli_oc," +
                     "correo_prov_oc," +
                     "dir_cli_oc," +
-                    "dir_prov_oc from [OrdenCompra]"), conn);
+                    "dir_prov_oc," +
+                    "despacho_oc from [OrdenCompra]"), conn);
 
                 SqlDataReader reader = comando.ExecuteReader();
 
@@ -136,7 +137,7 @@ namespace OrdenesCompra
                     pOC.Monto_oc = reader.GetInt32(6);
                     pOC.Descuentos_oc = reader.GetInt32(7);
                     pOC.Monto_total_oc = reader.GetInt32(8);
-                    pOC.Fecha_oc = reader.GetString(9);
+                    pOC.Fecha_oc = reader.GetDateTime(9).ToShortDateString();
                     pOC.Rut_cli_oc = reader.GetString(10);
                     pOC.Rut_prov_oc = reader.GetString(11);
                     pOC.Tel_cli_oc = reader.GetInt32(12);
@@ -145,6 +146,7 @@ namespace OrdenesCompra
                     pOC.Correo_prov_oc = reader.GetString(15);
                     pOC.Dir_cli_oc = reader.GetString(16);
                     pOC.Dir_prov_oc = reader.GetString(17);
+                    pOC.Despacho_oc = reader.GetString(18);
 
                     Lista.Add(pOC);
                 }
@@ -161,7 +163,7 @@ namespace OrdenesCompra
         {
             using (SqlConnection conn = BaseConexion.ObtenerConexion())
             {
-                string consulta = "SELECT id_oc, cliente_oc, proveedor_oc, cantidad_oc, descripcion_oc, producto_oc, monto_oc, descuentos_oc, monto_total_oc, fecha_oc, rut_cli_oc, rut_prov_oc, tel_cli_oc, tel_prov_oc, correo_cli_oc, correo_prov_oc, dir_cli_oc, dir_prov_oc FROM [OrdenCompra] WHERE id_oc = @Id";
+                string consulta = "SELECT id_oc, cliente_oc, proveedor_oc, cantidad_oc, descripcion_oc, producto_oc, monto_oc, descuentos_oc, monto_total_oc, fecha_oc, rut_cli_oc, rut_prov_oc, tel_cli_oc, tel_prov_oc, correo_cli_oc, correo_prov_oc, dir_cli_oc, dir_prov_oc, despacho_oc FROM [OrdenCompra] WHERE id_oc = @Id";
 
                 SqlCommand comando = new SqlCommand(consulta, conn);
                 comando.Parameters.AddWithValue("@Id", id);
@@ -181,7 +183,7 @@ namespace OrdenesCompra
                     pOC.Monto_oc = reader.GetInt32(6);
                     pOC.Descuentos_oc = reader.GetInt32(7);
                     pOC.Monto_total_oc = reader.GetInt32(8);
-                    pOC.Fecha_oc = reader.GetString(9);
+                    pOC.Fecha_oc = reader.GetDateTime(9).ToShortDateString();
                     pOC.Rut_cli_oc = reader.GetString(10);
                     pOC.Rut_prov_oc = reader.GetString(11);
                     pOC.Tel_cli_oc = reader.GetInt32(12);
@@ -190,6 +192,7 @@ namespace OrdenesCompra
                     pOC.Correo_prov_oc = reader.GetString(15);
                     pOC.Dir_cli_oc = reader.GetString(16);
                     pOC.Dir_prov_oc = reader.GetString(17);
+                    pOC.Despacho_oc = reader.GetString(18);
 
                     conn.Close();
                     return pOC;
@@ -197,6 +200,54 @@ namespace OrdenesCompra
 
                 conn.Close();
                 return null; // Retorna null si no se encuentra la orden con el ID especificado
+            }
+        }
+
+
+        //METODOS BUSCAR POR FECHA
+
+
+        public static DatosOC ObtenerOrdenPorFecha(string fecha)
+        {
+            using (SqlConnection conn = BaseConexion.ObtenerConexion())
+            {
+                string consulta = "SELECT id_oc, cliente_oc, proveedor_oc, cantidad_oc, descripcion_oc, producto_oc, monto_oc, descuentos_oc, monto_total_oc, fecha_oc, rut_cli_oc, rut_prov_oc, tel_cli_oc, tel_prov_oc, correo_cli_oc, correo_prov_oc, dir_cli_oc, dir_prov_oc, despacho_oc FROM [OrdenCompra] WHERE id_oc = @Fecha_oc";
+
+                SqlCommand comando = new SqlCommand(consulta, conn);
+                comando.Parameters.AddWithValue("@Fecha_oc", fecha);
+
+                SqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    DatosOC pOC = new DatosOC();
+
+                    pOC.Id_oc = reader.GetInt32(0);
+                    pOC.Cliente_oc = reader.GetString(1);
+                    pOC.Proveedor_oc = reader.GetString(2);
+                    pOC.Cantidad_oc = reader.GetInt32(3);
+                    pOC.Descripcion_oc = reader.GetString(4);
+                    pOC.Producto_oc = reader.GetString(5);
+                    pOC.Monto_oc = reader.GetInt32(6);
+                    pOC.Descuentos_oc = reader.GetInt32(7);
+                    pOC.Monto_total_oc = reader.GetInt32(8);
+                    pOC.Fecha_oc = reader.GetDateTime(9).ToShortDateString();
+                    pOC.Rut_cli_oc = reader.GetString(10);
+                    pOC.Rut_prov_oc = reader.GetString(11);
+                    pOC.Tel_cli_oc = reader.GetInt32(12);
+                    pOC.Tel_prov_oc = reader.GetInt32(13);
+                    pOC.Correo_cli_oc = reader.GetString(14);
+                    pOC.Correo_prov_oc = reader.GetString(15);
+                    pOC.Dir_cli_oc = reader.GetString(16);
+                    pOC.Dir_prov_oc = reader.GetString(17);
+                    pOC.Despacho_oc = reader.GetString(18);
+
+                    conn.Close();
+                    return pOC;
+                }
+
+                conn.Close();
+                return null; // Retorna null si no se encuentra la orden con la fecha especificada
             }
         }
 
@@ -209,7 +260,25 @@ namespace OrdenesCompra
             {
 
                 using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set despacho_oc= 'Despachado' where id_oc='{0}'",
-                        pDatosDespacho.Id_oc, conexion)))
+                        pDatosDespacho.Id_oc), conexion))
+
+                retornoActualizarDatosModificados = comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            return retornoActualizarDatosModificados;
+        }
+
+        //Metodo cambiar estado de orden de compra a Nula
+
+        public static int CambiaraNula(DatosOC pDatosDespacho)
+        {
+            int retornoActualizarDatosModificados = 0;
+            using (SqlConnection conexion = BaseConexion.ObtenerConexion())
+            {
+
+                using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set despacho_oc= 'Nula' where id_oc='{0}'",
+                        pDatosDespacho.Id_oc), conexion))
 
                     retornoActualizarDatosModificados = comando.ExecuteNonQuery();
                 conexion.Close();
@@ -217,7 +286,6 @@ namespace OrdenesCompra
             }
             return retornoActualizarDatosModificados;
         }
-
 
         //METODOS CALCULAR MONTO TOTAL ORDENES DE COMPRA
 
@@ -227,8 +295,8 @@ namespace OrdenesCompra
             using (SqlConnection conexion = BaseConexion.ObtenerConexion())
             {
 
-                using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set monto_total_oc= (monto_oc - descuento_oc) + monto_oc*0.19 where id_oc='{0}'",
-                        pDatosDespacho.Id_oc, conexion)))
+                using (SqlCommand comando = new SqlCommand(string.Format("Update [OrdenCompra] set monto_total_oc= ((monto_oc - descuento_oc) + (monto_oc*0.19)) where id_oc='{0}'",
+                        pDatosDespacho.Id_oc), conexion))
 
                     retornoActualizarDatosModificados = comando.ExecuteNonQuery();
                 conexion.Close();
@@ -249,45 +317,8 @@ namespace OrdenesCompra
                 {
                     comando.Connection = conexion;
                     comando.CommandType = CommandType.Text;
-                    comando.CommandText = "Insert into [OrdenCompra] " +
-                        "cliente_oc, " +
-                        "proveedor_oc, " +
-                        "cantidad_oc, " +
-                        "descripcion_oc," +
-                        "producto_oc," +
-                        "monto_oc," +
-                        "descuentos_oc," +
-                        "monto_total_oc," +
-                        "fecha_oc," +
-                        "rut_cli_oc," +
-                        "rut_prov_oc," +
-                        "tel_cli_oc," +
-                        "tel_prov_oc," +
-                        "correo_cli_oc," +
-                        "correo_prov_oc," +
-                        "dir_cli_oc," +
-                        "dir_prov_oc) " +
-                        "despacho_oc) " +
-
-                        "VALUES " +
-                        "(@Cliente_oc, " +
-                        "@Proveedor_oc, " +
-                        "@Cantidad_oc, " +
-                        "@Descripcion_oc, " +
-                        "@Producto_oc, " +
-                        "@Monto_oc, " +
-                        "@Descuentos_oc, " +
-                        "0, " +
-                        "@Fecha_oc, " +
-                        "@Rut_cli_oc, " +
-                        "@Rut_prov_oc, " +
-                        "@Tel_cli_oc, " +
-                        "@Tel_cli_oc, " +
-                        "@Correo_cli_oc, " +
-                        "@Correo_prov_oc, " +
-                        "@Dir_cli_oc, " +
-                        "@Dir_prov_oc)" +
-                        "EN PROGRESO";
+                    comando.CommandText = "Insert into [OrdenCompra] (cliente_oc, proveedor_oc, cantidad_oc, descripcion_oc, producto_oc, monto_oc, descuentos_oc,monto_total_oc,fecha_oc,rut_cli_oc, rut_prov_oc, tel_cli_oc, tel_prov_oc, correo_cli_oc, correo_prov_oc, dir_cli_oc, dir_prov_oc, despacho_oc) VALUES " +
+                        "(@Cliente_oc, @Proveedor_oc, @Cantidad_oc, @Descripcion_oc, @Producto_oc, @Monto_oc, @Descuentos_oc, 0, @Fecha_oc, @Rut_cli_oc, @Rut_prov_oc, @Tel_cli_oc, @Tel_prov_oc, @Correo_cli_oc, @Correo_prov_oc, @Dir_cli_oc, @Dir_prov_oc, 'EN PROGRESO')";
 
                     comando.Parameters.AddWithValue("@Cliente_oc", pDatosOC.Cliente_oc);
                     comando.Parameters.AddWithValue("@Proveedor_oc", pDatosOC.Proveedor_oc);
@@ -300,7 +331,7 @@ namespace OrdenesCompra
                     comando.Parameters.AddWithValue("@Rut_cli_oc", pDatosOC.Rut_cli_oc);
                     comando.Parameters.AddWithValue("@Rut_prov_oc", pDatosOC.Rut_prov_oc);
                     comando.Parameters.AddWithValue("@Tel_cli_oc", pDatosOC.Tel_cli_oc);
-                    comando.Parameters.AddWithValue("@Tel_cli_oc", pDatosOC.Tel_cli_oc);
+                    comando.Parameters.AddWithValue("@Tel_prov_oc", pDatosOC.Tel_prov_oc);
                     comando.Parameters.AddWithValue("@Correo_cli_oc", pDatosOC.Correo_cli_oc);
                     comando.Parameters.AddWithValue("@Correo_prov_oc", pDatosOC.Correo_prov_oc);
                     comando.Parameters.AddWithValue("@Dir_cli_oc", pDatosOC.Dir_cli_oc);

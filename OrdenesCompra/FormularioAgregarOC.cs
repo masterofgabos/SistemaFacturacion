@@ -16,6 +16,7 @@ namespace OrdenesCompra
         public FormularioAgregarOC()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -113,6 +114,16 @@ namespace OrdenesCompra
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             Metodos.SoloLetras(e);
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void FormularioAgregarOC_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
